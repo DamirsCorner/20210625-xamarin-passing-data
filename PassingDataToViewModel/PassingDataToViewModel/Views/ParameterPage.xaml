@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PassingDataToViewModel.Views.ParameterPage">
+    <ContentPage.Content>
+        <StackLayout Padding="24">
+            <Label Text="{Binding Param1, StringFormat='Param1: {0}'}}" />
+            <Label Text="{Binding Param2, StringFormat='Param2: {0}'}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
