@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using PassingDataToViewModel.Views;
+using System.Collections.Generic;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace PassingDataToViewModel.ViewModels
@@ -7,6 +9,11 @@ namespace PassingDataToViewModel.ViewModels
     {
         private string param1;
         private string param2;
+
+        public ParameterViewModel()
+        {
+            OpenModalCommand = new Command(async () => await Shell.Current.GoToAsync($"{nameof(ModalPage)}"));
+        }
 
         public string Param1 
         { 
@@ -19,6 +26,8 @@ namespace PassingDataToViewModel.ViewModels
             get => param2; 
             set => SetProperty(ref param2, value); 
         }
+
+        public ICommand OpenModalCommand { get; }
 
         public void ApplyQueryAttributes(IDictionary<string, string> query)
         {

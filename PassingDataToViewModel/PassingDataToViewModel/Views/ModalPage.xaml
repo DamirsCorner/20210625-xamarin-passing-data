@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PassingDataToViewModel.Views.ModalPage"
+             Shell.PresentationMode="ModalAnimated">
+    <ContentPage.Content>
+        <StackLayout Padding="24">
+            <Button Text="3"
+                    CommandParameter="3"
+                    Command="{Binding CloseCommand}"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
+            <Button Text="4"
+                    CommandParameter="4"
+                    Command="{Binding CloseCommand}"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -6,6 +6,10 @@
         <StackLayout Padding="24">
             <Label Text="{Binding Param1, StringFormat='Param1: {0}'}}" />
             <Label Text="{Binding Param2, StringFormat='Param2: {0}'}" />
+            <Button Text="Open modal"
+                    Command="{Binding OpenModalCommand}"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
